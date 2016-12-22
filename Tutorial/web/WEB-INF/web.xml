@@ -22,4 +22,22 @@
         <!-- url-pattern指向url要与WebServlet注解指向url不同 -->
         <url-pattern>/HelloWorld/HelloForm</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckBox</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.CheckBox</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckBox</servlet-name>
+        <url-pattern>/HelloWorld/CheckBox</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReadParams</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.ReadParams</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReadParams</servlet-name>
+        <url-pattern>/HelloWorld/ReadParams</url-pattern>
+    </servlet-mapping>
 </web-app>

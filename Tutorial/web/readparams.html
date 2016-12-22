@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Servlet 读取所有表单数据</title>
+</head>
+<body>
+<form action="ReadParams" method="POST" target="_blank">
+    <input type="checkbox" name="maths" checked="checked">数据<br>
+    <input type="checkbox" name="physics">物理<br>
+    <input type="checkbox" name="chemistry" checked="checked">化学<br>
+    <input type="text" name="other" placeholder="填写学科名..."><br>
+    <textarea name="suggest" cols="30" rows="10" placeholder="其他建议..."></textarea><br>
+    <select name="school">
+        <option value="四川大学" selected="selected">四川大学</option>
+        <option value="电子科大">电子科大</option>
+        <option value="其他">其他</option>
+    </select><br>
+    <input type="submit" value="选择学科"/>
+</form>
+</body>
+</html>
