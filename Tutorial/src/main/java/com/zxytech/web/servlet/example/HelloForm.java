@@ -24,7 +24,7 @@ public class HelloForm extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         PrintWriter out = response.getWriter();
-        String title = "使用GET方法读取表单数据";
+        String title = "使用POST方法读取表单数据";
 
         try {
             // 处理中文
