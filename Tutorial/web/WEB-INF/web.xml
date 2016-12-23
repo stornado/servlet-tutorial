@@ -80,4 +80,25 @@
         <servlet-name>ShowError</servlet-name>
         <url-pattern>/HelloWorld/ShowError</url-pattern>
     </servlet-mapping>
+
+    <!-- servlet 定义 -->
+    <servlet>
+        <servlet-name>ErrorHandler</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.ErrorHandler</servlet-class>
+    </servlet>
+    <!-- servlet 映射 -->
+    <servlet-mapping>
+        <servlet-name>ErrorHandler</servlet-name>
+        <url-pattern>/HelloWorld/ErrorHandler</url-pattern>
+    </servlet-mapping>
+    <!-- error-code 相关的错误页面 -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/HelloWorld/ErrorHandler</location>
+    </error-page>
+    <!-- exception-type 相关的错误页面 -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/ErrorHandler</location>
+    </error-page>
 </web-app>
