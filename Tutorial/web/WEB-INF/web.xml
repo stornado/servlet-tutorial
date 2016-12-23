@@ -58,4 +58,13 @@
         <servlet-name>Refresh</servlet-name>
         <url-pattern>/HelloWorld/Refresh</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowError</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.ShowError</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowError</servlet-name>
+        <url-pattern>/HelloWorld/ShowError</url-pattern>
+    </servlet-mapping>
 </web-app>
