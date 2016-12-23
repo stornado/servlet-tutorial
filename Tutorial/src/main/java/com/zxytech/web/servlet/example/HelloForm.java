@@ -2,11 +2,13 @@ package com.zxytech.web.servlet.example;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
 
 /**
  * Created by ryan on 2016/12/22.
@@ -20,6 +22,18 @@ public class HelloForm extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 为名字创建Cookie
+        Cookie cookieName = new Cookie("name", URLEncoder.encode(request.getParameter("name"), "UTF-8"));//中文转码
+        Cookie url = new Cookie("url", request.getParameter("url"));
+
+        // 为两个Cookie设置过期时间秒
+        cookieName.setMaxAge(60);
+        url.setMaxAge(60 * 2);
+
+        // 在响应头中添加两个Cookie
+        response.addCookie(cookieName);
+        response.addCookie(url);
+
         // 设置响应内容类型
         response.setContentType("text/html;charset=UTF-8");
 
