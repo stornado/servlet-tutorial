@@ -49,4 +49,13 @@
         <servlet-name>DisplayHeader</servlet-name>
         <url-pattern>/HelloWorld/DisplayHeader</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Refresh</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.Refresh</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Refresh</servlet-name>
+        <url-pattern>/HelloWorld/Refresh</url-pattern>
+    </servlet-mapping>
 </web-app>
