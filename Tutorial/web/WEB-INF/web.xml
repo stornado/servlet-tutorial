@@ -133,4 +133,13 @@
         <!--所以，如果在 web.xml 中配置 session 会话超时时间为 15 分钟，那么 getMaxInactiveInterval() 会返回 900。-->
         <session-timeout>15</session-timeout>
     </session-config>
+
+    <servlet>
+        <servlet-name>DatabaseAccess</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.DatabaseAccess</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DatabaseAccess</servlet-name>
+        <url-pattern>/HelloWorld/DatabaseAccess</url-pattern>
+    </servlet-mapping>
 </web-app>
