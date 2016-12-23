@@ -40,4 +40,13 @@
         <servlet-name>ReadParams</servlet-name>
         <url-pattern>/HelloWorld/ReadParams</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DisplayHeader</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.DisplayHeader</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayHeader</servlet-name>
+        <url-pattern>/HelloWorld/DisplayHeader</url-pattern>
+    </servlet-mapping>
 </web-app>
