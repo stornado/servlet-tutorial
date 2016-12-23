@@ -4,6 +4,19 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <filter>
+        <filter-name>LogFilter</filter-name>
+        <filter-class>com.zxytech.web.servlet.example.LogFilter</filter-class>
+        <init-param>
+            <param-name>Site</param-name>
+            <param-value>菜鸟教程</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>LogFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>HelloWorld</servlet-name>
         <servlet-class>com.zxytech.web.servlet.example.HelloWorld</servlet-class>
