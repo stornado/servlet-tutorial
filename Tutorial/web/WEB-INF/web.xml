@@ -142,4 +142,14 @@
         <servlet-name>DatabaseAccess</servlet-name>
         <url-pattern>/HelloWorld/DatabaseAccess</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <display-name>UploadServlet</display-name>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/HelloWorld/UploadServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
