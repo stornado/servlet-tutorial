@@ -190,4 +190,13 @@
         <servlet-name>PageHitCounter</servlet-name>
         <url-pattern>/HelloWorld/PageHitCounter</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SendMail</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.SendMail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendMail</servlet-name>
+        <url-pattern>/HelloWorld/SendMail</url-pattern>
+    </servlet-mapping>
 </web-app>
