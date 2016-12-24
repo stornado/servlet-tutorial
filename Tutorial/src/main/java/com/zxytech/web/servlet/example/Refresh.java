@@ -31,6 +31,18 @@ public class Refresh extends HttpServlet {
         // 格式输出
         String nowTime = dateFormat.format(taskTime);
 
+        String amOrPm;
+        if (calendar.get(Calendar.AM_PM) == 0) {
+            amOrPm = "AM";
+        } else {
+            amOrPm = "PM";
+        }
+        int hour = calendar.get(Calendar.HOUR);
+        int minute = calendar.get(Calendar.MINUTE);
+        int second = calendar.get(Calendar.SECOND);
+
+        String currentTime = hour + ":" + minute + ":" + second + " " + amOrPm;
+
         PrintWriter out = response.getWriter();
         String title = "Servlet 自动刷新Header设置";
         String htmlDocument = "";
@@ -39,7 +51,8 @@ public class Refresh extends HttpServlet {
                 "<head><title>" + title + "</title></head>\n" +
                 "<body bgcolor=\"#f0f0f0\">\n" +
                 "<h1 align=\"center\">" + title + "</h1>\n" +
-                "<p>当前时间是：" + nowTime + "</p>\n";
+                "<p>当前时间是：" + nowTime + "</p>\n" +
+                "<p>当前时间是：" + currentTime + "</p>\n";
 
         out.println(htmlDocument);
     }
