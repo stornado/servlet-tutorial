@@ -1,12 +1,10 @@
 package com.zxytech.web.servlet.example;
 
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.*;
+import javax.mail.internet.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -50,11 +48,32 @@ public class SendMail extends HttpServlet {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             // 设置Subject：header field
             message.setSubject("这是邮件主题");
+
             // 设置实际消息
             // message.setText("这是邮件内容");
+
             // 发送HTML消息，内容大小不限
-            String content = "<h1>邮件正文</h1><br>\n<p>这是一封HTML邮件</p>";
-            message.setContent(content, "text/html;charset=UTF-8");
+            // String content = "<h1>邮件正文</h1><br>\n<p>这是一封HTML邮件</p>";
+            // message.setContent(content, "text/html;charset=UTF-8");
+
+            // 创建一个多部分消息
+            Multipart multipart = new MimeMultipart();
+            // 设置文本消息部分
+            BodyPart messageBodyPart = new MimeBodyPart();
+            messageBodyPart.setText("这是邮件正文部分");
+            multipart.addBodyPart(messageBodyPart);
+
+            // 第二部分是附件
+            messageBodyPart = new MimeBodyPart();
+            String filename = "hello.html";
+            DataSource source = new FileDataSource(filename);
+            messageBodyPart.setDataHandler(new DataHandler(source));
+            messageBodyPart.setFileName(filename);
+            multipart.addBodyPart(messageBodyPart);
+
+            // 发送完整消息
+            message.setContent(multipart);
+
             // 发送消息
             Transport.send(message);
 

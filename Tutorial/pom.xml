@@ -11,6 +11,11 @@
 
     <repositories>
         <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus Aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+        <repository>
             <id>central</id>
             <name>Maven Central</name>
             <url>http://repo1.maven.org/maven2/</url>
@@ -19,11 +24,6 @@
             <id>jboss-maven2-release-repository</id>
             <name>JBoss 3rd-party</name>
             <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/</url>
-        </repository>
-        <repository>
-            <id>nexus-aliyun</id>
-            <name>Nexus Aliyun</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
         </repository>
     </repositories>
 
