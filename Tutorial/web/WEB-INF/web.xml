@@ -17,6 +17,17 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>SiteHitCounter</filter-name>
+        <filter-class>com.zxytech.web.servlet.example.SiteHitCounter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SiteHitCounter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
     <servlet>
         <servlet-name>HelloWorld</servlet-name>
         <servlet-class>com.zxytech.web.servlet.example.HelloWorld</servlet-class>
@@ -168,6 +179,15 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>PageRedirect</servlet-name>
-        <url-pattern>/HellorWorld/PageRedirect</url-pattern>
+        <url-pattern>/HelloWorld/PageRedirect</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PageHitCounter</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.PageHitCounter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PageHitCounter</servlet-name>
+        <url-pattern>/HelloWorld/PageHitCounter</url-pattern>
     </servlet-mapping>
 </web-app>
