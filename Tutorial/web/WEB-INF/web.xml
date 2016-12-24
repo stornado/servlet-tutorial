@@ -161,4 +161,13 @@
         <servlet-name>CurrentDate</servlet-name>
         <url-pattern>/HelloWorld/CurrentDate</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PageRedirect</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.PageRedirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PageRedirect</servlet-name>
+        <url-pattern>/HellorWorld/PageRedirect</url-pattern>
+    </servlet-mapping>
 </web-app>
