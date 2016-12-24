@@ -152,4 +152,13 @@
         <servlet-name>UploadServlet</servlet-name>
         <url-pattern>/HelloWorld/UploadServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CurrentDate</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.CurrentDate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CurrentDate</servlet-name>
+        <url-pattern>/HelloWorld/CurrentDate</url-pattern>
+    </servlet-mapping>
 </web-app>
