@@ -208,4 +208,45 @@
         <servlet-name>ContextLog</servlet-name>
         <url-pattern>/HelloWorld/ContextLog</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetLocale</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.GetLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetLocale</servlet-name>
+        <url-pattern>/HelloWorld/GetLocale</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DisplaySpanish</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.DisplaySpanish</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplaySpanish</servlet-name>
+        <url-pattern>/HelloWorld/DisplaySpanish</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DateLocale</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.DateLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DateLocale</servlet-name>
+        <url-pattern>/HelloWorld/DateLocale</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CurrencyLocale</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.CurrencyLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CurrencyLocale</servlet-name>
+        <url-pattern>/HelloWorld/CurrencyLocale</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>PercentageLocale</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.PercentageLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PercentageLocale</servlet-name>
+        <url-pattern>/HelloWorld/PercentageLocale</url-pattern>
+    </servlet-mapping>
 </web-app>
