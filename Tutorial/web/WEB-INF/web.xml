@@ -199,4 +199,13 @@
         <servlet-name>SendMail</servlet-name>
         <url-pattern>/HelloWorld/SendMail</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextLog</servlet-name>
+        <servlet-class>com.zxytech.web.servlet.example.ContextLog</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextLog</servlet-name>
+        <url-pattern>/HelloWorld/ContextLog</url-pattern>
+    </servlet-mapping>
 </web-app>
